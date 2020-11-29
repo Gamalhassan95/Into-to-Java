@@ -34,9 +34,16 @@ public class Customer {
     }
 
     public void addToCart(Item item) {
-        this.Groceries.add(item);
-        this.Groceries.get(0);
-        System.out.println(item.getName() + " added");
+        if(getMoney() >= item.getPrice()) {
+            this.Groceries.add(item);
+            this.Groceries.get(0);
+            System.out.println(item.getName() + " added");
+            ReduceMoney(item.getPrice());
+        }
+        else {
+            System.out.printf("You do not have enough money, you only have, %.2f\n", getMoney());
+        }
+
     }
 
 //getter
@@ -58,19 +65,17 @@ public class Customer {
         return this.Groceries;
     }
 
-    public String getGroceries() {
-
-        StringBuffer sb = new StringBuffer();
-
-        for ( Item i : this.Groceries) {
+    public void getGroceries()
+    {
+        System.out.print("Cart contains : ----\n");
+        for( Item i : this.Groceries)
+        {
             i.toString();
-
         }
-
-        String str =  sb.toString();
-        System.out.print(str + "iii");
-        return str;
+        System.out.print("-----:\n");
     }
+
+
 
     public  double ReduceMoney(Double deficit){
         this.money = this.money - deficit;
@@ -82,7 +87,7 @@ public class Customer {
         System.out.printf("\n The Invoice has been sent to your email on file: %s ", email);
     }
     public String toString(){
-        return String.format("Name of Customer: %s, He has this amount: %.2f, His e-mail is: , %s He has these groceries %s"
-                , getName(), getMoney(), getEmail(), getGroceries() );
+        return String.format("Name of Customer: %s, He has this amount: %.2f, His e-mail is: , %s /*He has these groceries %s*/"
+                , getName(), getMoney(), getEmail() );
     }
 }

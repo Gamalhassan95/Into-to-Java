@@ -18,16 +18,19 @@ public class Adventure {
         Customer cb = new Customer("Vlad", 250.00, "janiie@j.com");
 
 
-        Item One = new Item("Apples", 1.00, true ,"Red");
-        Item Two = new Item("Oranges", 2.00, false, "Orange");
-        Item Three = new Item("Strawberries", 3.00, false, "Red");
+        Item One = new Item("Apples", 50.00, true ,"Red");
+        Item Two = new Item("Oranges", 75.00, false, "Orange");
+        Item Three = new Item("Strawberries", 100.00, false, "Red");
 
         customers.addAll(Arrays.asList(a, b , ca, cb));
         List<Item> itemsList = Arrays.asList(One, Two, Three);
 
-        a.addToCart(One);
+        a.addToCart(One); // this simu a purchase
+        a.addToCart(Two);
+        a.addToCart(Three);
+        a.getGroceries();
 
-        System.out.println(a);
+        //System.out.println(a);
 
     }
 
