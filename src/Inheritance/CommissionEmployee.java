@@ -1,20 +1,20 @@
 package Inheritance;
 
-public class ComissionEmployee extends Object
+public class CommissionEmployee extends Object
 {
-    private String firstName;
-    private String lastName;
-    private String socialSecurityNumber;
-    private double grossSales;
-    private double comissionRate;
+    protected String firstName;
+    protected String lastName;
+    protected String socialSecurityNumber;
+    protected double grossSales;
+    protected double commissionRate;
 
-    public ComissionEmployee( String first, String last, String ssn, double sales, double rate )
+    public CommissionEmployee(String first, String last, String ssn, double sales, double rate )
     {
         firstName = first;
         lastName = last;
         socialSecurityNumber = ssn;
         setGrossSales( sales );
-        setComissionRate( rate );
+        setcommissionRate( rate );
     }
 
     public void setFirstName( String first )
@@ -54,24 +54,24 @@ public class ComissionEmployee extends Object
     {
         return grossSales;
     }
-    public void setComissionRate( double rate)
+    public void setcommissionRate( double rate)
     {
         if ( rate > 0.0 && rate < 1.0 )
-            comissionRate = rate;
+            commissionRate = rate;
         else
             throw new IllegalArgumentException(
                     "Commission rate must be > 0.0 and < 1.0"
             );
     }
 
-    public double getComissionRate()
+    public double getcommissionRate()
     {
-        return comissionRate;
+        return commissionRate;
     }
 
     public double earnings()
     {
-        return comissionRate * grossSales;
+        return commissionRate * grossSales;
     }
     @Override
     public String toString()
@@ -80,6 +80,6 @@ public class ComissionEmployee extends Object
                 "commission employee", firstName, lastName,
                 "social security number", socialSecurityNumber,
                 "gross sales", grossSales,
-                "commission rate", comissionRate );
+                "commission rate", commissionRate );
     }
 }
