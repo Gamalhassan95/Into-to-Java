@@ -1,4 +1,4 @@
-package PracticeObjectOriented;
+package Adventure.PracticeObjectOriented;
 
 /*Create a console app that:
         - uses arraylist to store car models

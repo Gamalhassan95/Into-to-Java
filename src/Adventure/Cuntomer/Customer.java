@@ -1,7 +1,6 @@
-package Adventure;
+package Adventure.Cuntomer;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Customer {
 

@@ -1,9 +1,7 @@
-package PracticeObjectOriented;
+package Adventure.PracticeObjectOriented;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import static java.lang.Boolean.TRUE;
 
 public class CarStuffTest {
     public static void main(String[] args) {

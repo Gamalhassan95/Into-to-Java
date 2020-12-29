@@ -1,4 +1,6 @@
-package Adventure;
+package Adventure.Cuntomer;
+
+import Adventure.Cuntomer.Adventure;
 
 public class Item
 {
