@@ -41,14 +41,15 @@ public class HourlyEmployee extends Employee
     {
         return hours;
     }
-/*    @Override
-*//*    public double earnings()
+
+    @Override
+    public double earnings()
     {
         if ( getHours() <= 40 )
             return getWage() * getHours();
         else
             return 40 * getWage() + ( getHours() - 40 ) * getWage() * 1.5;
-    }*/
+    }
 
     @Override
     public String toString()
